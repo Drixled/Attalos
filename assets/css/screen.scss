@@ -5,11 +5,20 @@
 @import url('//fonts.googleapis.com/css?subset=latin,cyrillic-ext,latin-ext,cyrillic&family=Open+Sans+Condensed:300|Open+Sans:400,600,400italic,600italic|Merriweather:400,300,300italic,400italic,700,700italic|Roboto+Slab:400,300');
 @import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
 
-// Variables
+
+
+$black: #121212;
+$gold: #9D8F5E;
+$gray: #A1A1A1;
+$white: #FFFFFF;
+
+$primary-font: "Julius Sans One", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$secondary-font: "Crimson Text", serif;
+
 $bodyBackgroundColor: #ffffff;
 $baseFontFamily: "Crimson Text", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
 $baseFontColor: #7f8c8d;
-$headerFontFamily: "Roboto Slab", $baseFontFamily;
+$headerFontFamily: $baseFontFamily;
 $headerFontColor: #151515;
 $headerLinkColor: $headerFontColor;
 $secondaryFontFamily: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
@@ -26,25 +35,70 @@ $maxPageWidth: 600px;
 
 // Styles
 
-/* === Core Styles === */
-
-body {
-    background-color: $bodyBackgroundColor;
-    color: $baseFontColor;
-    font-size: 15px;
-    font-weight: 100;
-    line-height: 1.6em;
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: subpixel-antialiased;
+ ::-moz-selection {
+    background: #B89B45;
+    color: #000;
+    text-shadow: none;
 }
 
-    body * {
-        max-height: 1000000em
-    }
+::selection {
+    background: #B89B45;
+    color: #000;
+    text-shadow: none;
+}
 
-h1, h2, h3, h4, p, li, dt, dd {
-    font-family: $baseFontFamily;
+
+/* === Core Styles === */
+
+
+html {font-size: 1em;}
+
+body {
+  background-color: $black;
+  font-family: $secondary-font, serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: $gray;
+
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {margin-bottom: 1.3em;}
+
+// p, li, dt, dd {
+//     font: 16px/24px 'Crimson Text', Georgia, serif;
+//     font-weight: 100;
+// }
+
+h1, h2, h3, h4 {
+  color: $gold;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+
+}
+
+h2 {font-size: 2.369em;}
+h3 {font-size: 1.777em;}
+h4 {font-size: 1.333em;}
+small, .font_small {font-size: 0.75em;}
+
+
+body * {
+  max-height: 1000000em
+}
+
+h1 {
+    font-family: $primary-font;
+    font-size: 4.2em;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 h1, .post-meta {
@@ -62,11 +116,7 @@ a:focus, a:hover {
     color: $linkColorHover;
 }
 
-p, li, dt, dd {
-    font-size: 18px;
-    font-weight: 100;
-    line-height: 30px;
-}
+
 
 dt {
     font-weight: 400
@@ -96,15 +146,7 @@ p code {
     line-height: 1.2em;
 }
 
-h1 {
-    color: $headerFontColor;
-    font-family: $headerFontFamily;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 42px;
-    margin: 0;
-    padding: 0;
-}
+
 
 #site-head, article, article.preview, a.archive-link, .article-nav {
     margin: 20px auto;
@@ -161,6 +203,7 @@ h2.blog-description {
     margin-bottom: 2em;
     padding: .5em 1em;
     line-height: 1.2em;
+    display: none;
 }
 
 section.footer-description {
@@ -270,7 +313,7 @@ div.authorimage {
 }
 
 h1.post-title a, h1.blog-title a {
-    color: $headerLinkColor;
+    color: $gold;
     transition: color ease 0.7s;
     -webkit-transition: color ease 0.7s;
 }
