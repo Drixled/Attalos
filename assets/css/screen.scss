@@ -6,37 +6,31 @@
 @import url('//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
 
 // Variables
+$bodyBackgroundColor: #ffffff;
+$baseFontFamily: "Crimson Text", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+$baseFontColor: #7f8c8d;
+$headerFontFamily: "Roboto Slab", $baseFontFamily;
+$headerFontColor: #151515;
+$headerLinkColor: $headerFontColor;
+$secondaryFontFamily: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+$preFontFamily: "Consolas", Courier, monospace;
+$tableFontFamily: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
+$linkColor: #3498db;
+$linkColorHover: darken($linkColor, 50%);
+$borderColor: #ecf0f1;
+$subtleColor: rgba(0,0,0,0.05);
+$postmetaColor: #95a5a6;
+$gistBackgroundColor: #fdfdfd;
 
-
-
-
-
-
-@bodyBackgroundColor: #ffffff;
-@baseFontFamily: "Crimson Text", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-@baseFontColor: #7f8c8d;
-@headerFontFamily: "Roboto Slab", @baseFontFamily;
-@headerFontColor: #151515;
-@headerLinkColor: @headerFontColor;
-@secondaryFontFamily: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-@preFontFamily: "Consolas", Courier, monospace;
-@tableFontFamily: "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;
-@linkColor: #3498db;
-@linkColorHover: darken(@linkColor, 50%);
-@borderColor: #ecf0f1;
-@subtleColor: rgba(0,0,0,0.05);
-@postmetaColor: #95a5a6;
-@gistBackgroundColor: #fdfdfd;
-
-@maxPageWidth: 600px;
+$maxPageWidth: 600px;
 
 // Styles
 
 /* === Core Styles === */
 
 body {
-    background-color: @bodyBackgroundColor;
-    color: @baseFontColor;
+    background-color: $bodyBackgroundColor;
+    color: $baseFontColor;
     font-size: 15px;
     font-weight: 100;
     line-height: 1.6em;
@@ -50,7 +44,7 @@ body {
     }
 
 h1, h2, h3, h4, p, li, dt, dd {
-    font-family: @baseFontFamily;
+    font-family: $baseFontFamily;
 }
 
 h1, .post-meta {
@@ -58,14 +52,14 @@ h1, .post-meta {
 }
 
 a, a:visited {
-    color: @linkColor;
+    color: $linkColor;
     text-decoration: none;
     transition: color ease 0.7s;
     -webkit-transition: color ease 0.7s;
 }
 
 a:focus, a:hover {
-    color: @linkColorHover;
+    color: $linkColorHover;
 }
 
 p, li, dt, dd {
@@ -83,7 +77,7 @@ li {
 }
 
 pre {
-    font-family: @preFontFamily;
+    font-family: $preFontFamily;
     font-size: 1em;
     line-height: 1.2em;
     padding: 1em;
@@ -93,18 +87,18 @@ pre {
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
-    background-color: @subtleColor;
+    background-color: $subtleColor;
 }
 
 p code {
-    font-family: @preFontFamily;
+    font-family: $preFontFamily;
     font-size: .8em;
     line-height: 1.2em;
 }
 
 h1 {
-    color: @headerFontColor;
-    font-family: @headerFontFamily;
+    color: $headerFontColor;
+    font-family: $headerFontFamily;
     font-size: 36px;
     font-weight: 400;
     line-height: 42px;
@@ -114,7 +108,7 @@ h1 {
 
 #site-head, article, article.preview, a.archive-link, .article-nav {
     margin: 20px auto;
-    max-width: @maxPageWidth;
+    max-width: $maxPageWidth;
     width: 90%;
 }
 
@@ -145,7 +139,7 @@ article.preview {
       border-radius: 50%;
       background-size: cover !important;
       background-position: center center !important;
-      background-color: @bodyBackgroundColor;
+      background-color: $bodyBackgroundColor;
     }
 }
 
@@ -162,8 +156,8 @@ h1.blog-title {
 }
 
 h2.blog-description {
-    border-bottom: 1px solid @borderColor;
-    border-top: 1px solid @borderColor;
+    border-bottom: 1px solid $borderColor;
+    border-top: 1px solid $borderColor;
     margin-bottom: 2em;
     padding: .5em 1em;
     line-height: 1.2em;
@@ -187,7 +181,7 @@ section.author, section.share {
 
 section.share {
     margin-top: 1em;
-    border-top: 1px solid @borderColor;
+    border-top: 1px solid $borderColor;
     padding-top: 1em;
     text-align: right;
 }
@@ -198,7 +192,7 @@ section.share {
     }
 
 section.author h4 {
-    font-family: @headerFontFamily;
+    font-family: $headerFontFamily;
     font-weight: 400;
     margin-bottom: 4px;
 }
@@ -207,7 +201,7 @@ section.author p.attr, section.share p.info {
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
-    font-family: @secondaryFontFamily;
+    font-family: $secondaryFontFamily;
 }
 
 section.share p.info.prompt {
@@ -230,19 +224,19 @@ section.author p.bio {
 }
 
 blockquote {
-    font-family: @secondaryFontFamily;
+    font-family: $secondaryFontFamily;
     font-size: 1.6em;
     font-weight: 300;
     line-height: 1.2em;
     font-style: italic;
     text-transform: uppercase;
-    border-left: .5em solid @subtleColor;
+    border-left: .5em solid $subtleColor;
     margin-left: 1em;
     padding-left: 1em;
 }
 
     blockquote p {
-        font-family: @secondaryFontFamily;
+        font-family: $secondaryFontFamily;
         font-size: 1.6em;
         font-weight: 300;
         line-height: 1.2em;
@@ -251,8 +245,8 @@ blockquote {
     }
 
 .post-meta {
-    color: @postmetaColor;
-    font-family: @secondaryFontFamily;
+    color: $postmetaColor;
+    font-family: $secondaryFontFamily;
     font-size: 20px;
     font-weight: 300;
     margin-top: 1em;
@@ -276,18 +270,18 @@ div.authorimage {
 }
 
 h1.post-title a, h1.blog-title a {
-    color: @headerLinkColor;
+    color: $headerLinkColor;
     transition: color ease 0.7s;
     -webkit-transition: color ease 0.7s;
 }
 
 h1.post-title a:focus, h1.post-title a:hover, h1.blog-title a:focus, h1.blog-title a:hover {
-    color: @linkColor;
+    color: $linkColor;
     text-decoration: none;
 }
 
 h2 {
-    font-family: @secondaryFontFamily;
+    font-family: $secondaryFontFamily;
     margin-top: 2em;
     text-transform: uppercase;
     font-weight: 300;
@@ -319,14 +313,14 @@ img.userimage {
 /* === Footer === */
 
 footer {
-    background: @subtleColor;
+    background: $subtleColor;
     margin: 4em 0 0;
     padding: 2em 0;
     text-align: center;
 }
 
     footer section {
-        font-family: @secondaryFontFamily;
+        font-family: $secondaryFontFamily;
         font-weight: 300;
         font-size: 18px;
         margin: 0 auto;
@@ -337,19 +331,19 @@ footer {
 
 footer.post-footer {
     background: none;
-    border-top: 1px solid @borderColor;
+    border-top: 1px solid $borderColor;
     margin-top: 1em;
 }
 
 /* === Navigation and Pagination === */
 
 nav {
-    border-bottom: 1px solid @borderColor;
-    border-top: 1px solid @borderColor;
+    border-bottom: 1px solid $borderColor;
+    border-top: 1px solid $borderColor;
     margin-bottom: 2em;
     text-align: center;
     margin: 20px auto 2em auto;
-    max-width: @maxPageWidth;
+    max-width: $maxPageWidth;
     ul {
         list-style: none;
         margin: 0 auto;
@@ -359,7 +353,7 @@ nav {
         text-align: center;
         li {
             display: inline-block;
-            font-family: @secondaryFontFamily;
+            font-family: $secondaryFontFamily;
             font-size: 18px;
             font-weight: 300;
             margin: 0;
@@ -402,10 +396,10 @@ nav {
 }
 
 a.archive-link {
-    border-bottom: 1px solid @borderColor;
-    border-top: 1px solid @borderColor;
+    border-bottom: 1px solid $borderColor;
+    border-top: 1px solid $borderColor;
     display: block;
-    font-family: @secondaryFontFamily;
+    font-family: $secondaryFontFamily;
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 3em;
@@ -419,16 +413,16 @@ a.archive-link {
     position: relative;
     width: 90%;
     max-width: 600px;
-    font-family: @secondaryFontFamily;
+    font-family: $secondaryFontFamily;
     text-transform: uppercase;
     font-size: 20px;
-    color: @baseFontColor;
+    color: $baseFontColor;
     text-align: center;
     padding: 0.5em 0;
 }
 
     .pagination a {
-        color: @linkColor
+        color: $linkColor
     }
 
 .older-posts, .newer-posts {
@@ -455,7 +449,7 @@ a.archive-link {
 }
 
 .older-posts:hover, .newer-posts:hover {
-    color: @linkColorHover;
+    color: $linkColorHover;
     text-decoration: none;
 }
 
@@ -468,23 +462,23 @@ a.archive-link {
 }
 
     .gist .gist-file {
-        font-family: @preFontFamily;
-        border: 1px solid @subtleColor !important;
+        font-family: $preFontFamily;
+        border: 1px solid $subtleColor !important;
     }
 
         .gist .gist-file .gist-meta {
-            font-family: @secondaryFontFamily !important;
+            font-family: $secondaryFontFamily !important;
             font-weight: 300 !important;
             text-transform: uppercase !important;
             display: none !important; /* Hide GitHub attribution */
         }
 
             .gist .gist-file .gist-meta a:visited {
-                color: @linkColor !important
+                color: $linkColor !important
             }
 
         .gist .gist-file .gist-data {
-            background: @gistBackgroundColor !important;
+            background: $gistBackgroundColor !important;
             border-bottom: none !important; /* Hide GitHub attribution */
         }
 
@@ -493,7 +487,7 @@ a.archive-link {
             }
 
             .gist .gist-file .gist-data .line-numbers, .gist .gist-file .gist-meta {
-                background-color: @subtleColor !important
+                background-color: $subtleColor !important
             }
 
             .gist .gist-file .gist-data .line-numbers, .gist .gist-file .gist-data .line-pre {
@@ -550,7 +544,7 @@ a.archive-link {
 
 table {
     width: 100%;
-    font-family: @tableFontFamily;
+    font-family: $tableFontFamily;
     border-collapse: collapse;
     margin: 1em 0 3em;
     td {
@@ -558,17 +552,17 @@ table {
     }
     thead {
         font-weight: 600;
-        border-bottom: 1px solid @borderColor;
+        border-bottom: 1px solid $borderColor;
     }
     tbody {
         tr:nth-child(even) {
-            background-color: @borderColor;
-            border-top: 1px solid darken(@borderColor, 3%);
-            border-bottom: 1px solid darken(@borderColor, 3%);
+            background-color: $borderColor;
+            border-top: 1px solid darken($borderColor, 3%);
+            border-bottom: 1px solid darken($borderColor, 3%);
         }
     }
     tfoot {
-        border-top: 1px solid @borderColor;
+        border-top: 1px solid $borderColor;
     }
 }
 
